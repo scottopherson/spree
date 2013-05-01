@@ -164,7 +164,8 @@ module Spree
 
     # If true, causes the confirmation step to happen during the checkout process
     def confirmation_required?
-      payments.map(&:payment_method).any?(&:payment_profiles_supported?)
+      # payments.map(&:payment_method).any?(&:payment_profiles_supported?)
+      true
     end
 
     # Indicates the number of items in the order
